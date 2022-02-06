@@ -1,0 +1,919 @@
+
+/* 
+==================================================
+                    prelimineies
+==================================================
+*/
+
+:root{
+  --primary-color:#651ed8;
+  --secondary-color:#ffbd04;
+  --white:#ffffff;
+  --black:#000000;
+  --dark:#333333;
+  --text-color:#666666;
+}
+body{
+  font-family: 'Poppins';
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a,
+a:focus {
+  text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+button,
+input,
+textarea,
+button:focus,
+input:focus,
+textarea:focus {
+    border: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    cursor: pointer;
+}
+
+/* 
+==================================================
+                    re-usable components
+==================================================
+*/
+
+/* font family */
+.font-p-100{
+  font-family: 'Poppins';
+  font-weight: 100;
+}
+.font-p-200{
+  font-family: 'Poppins';
+  font-weight: 200;
+}
+.font-p-300{
+  font-family: 'Poppins';
+  font-weight: 300;
+}
+.font-p-400{
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+.font-p-500{
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+.font-p-600{
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+.font-p-700{
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+/* font size */
+.fs-16{
+  font-size: 16px;
+}
+.fs-18{
+  font-size: 18px;
+}
+.fs-20{
+  font-size: 20px;
+}
+.fs-24{
+  font-size: 24px;
+}
+.fs-40{
+  font-size: 40px;
+}
+.fs-45{
+  font-size: 45px;
+}
+.fs-50{
+  font-size: 50px;
+}
+/* text color */
+.tc-00{
+  color: #000000;
+}
+.tc-ff{
+  color: #ffffff;
+}
+.tc-33{
+  color: #333333;
+}
+.tc-66{
+  color: #666666;
+}
+.tc-14{
+  color: #141b4d;
+}
+.tc-99{
+  color: #999999;
+}
+.tc-primary{
+  color: #651ed8;
+}
+.tc-secondary{
+  color: #ffbd04;
+}
+/* background color */
+.bg-ff{
+  background: #fff;
+}
+.bg-primary{
+  background: #651ed8 !important;
+}
+.bg-secondary{
+  background: #ffbd04 !important;
+}
+.bg-light{
+  background: #eef2f6 !important;
+}
+.bg-ee{
+  background: #eef2f6;
+}
+
+/* animation */
+.transition-3{
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  background-color: var(--black);
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  z-index: 999999;
+}
+
+#myBtn:hover {
+  background-color: var(--dark);
+}
+
+/* 
+==================================================
+                  Header CSS
+==================================================
+*/
+
+header{
+  z-index: 99999;
+  padding: 30px 0;
+  -webkit-transition: .6s all linear;
+  -o-transition: .6s all linear;
+  transition: .6s all linear;
+}
+header .get-qout:hover{
+  background: var(--black) !important;
+  color: var(--white);
+}
+header nav ul li a{
+  display: inline-block;
+  padding: 10px;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+header nav ul li a:hover{
+  background:var(--secondary-color);
+  color: var(--white);
+}
+
+/* ===== dropdown =====*/
+.submenu{
+  position: relative;
+}
+.dropdown-content{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 220px;
+  background: var(--white);
+  top: 130%;
+  left: 0;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.submenu:hover .dropdown-content{
+ visibility: visible;
+ opacity: 1;
+ top: 100%;
+}
+
+.dropdown-content li a{
+  color: var(--dark);
+  display: block;
+  padding: 10px;
+  width: 100%;
+  border-top: 1px solid var(--secondary-color);
+}
+.dropdown-content li:first-child a{
+  border: none;
+}
+
+/* ===== sticky header =====*/
+header.sticky {
+  background: var(--white);
+  padding: 10px 0 !important;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/*===== mobile menu buttons =====*/
+.menu-toggler {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #141b4d;;
+  margin: 6px 0;
+  border-radius: 5px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.cross{
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.cross span{
+  font-size: 30px;
+  color: #141b4d;;
+}
+
+/* ================================================== 
+                  Banner CSS
+================================================== */
+.banner{
+  min-height: 110vh;
+ /* padding: 200px 0 100px;
+  */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.banner .get-started{
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.banner .get-started:hover{
+  background: var(--black) !important;
+  color: var(--white);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.banner-image{
+  position: absolute;
+  top: 130px;
+  right: 50px;
+}
+.banner-image img{
+  float: right;
+}
+
+/* ================================================== 
+                  Service CSS
+================================================== */
+.services{
+  position: relative;
+  background: var(--primary-color);
+}
+.services::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: url(../images/divider.png);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  background-size: cover;
+}
+.services-item{
+  position: relative;
+  z-index: 9;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 315px;
+}
+
+/* ================================================== 
+                Skills CSS 
+================================================== */
+
+.skills{
+  background: var(--primary-color);
+  padding-bottom: 180px;
+}
+.skills-content{
+  margin-left: 50px;
+}
+.skill{
+  height: 12px;
+  width: 100%;
+  margin: 10px auto 20px;
+  background: var(--white);
+  position: relative;
+}
+.skill .skill-bar{
+  width: 0;
+  height: 100%;
+  background: var(--secondary-color);
+  -webkit-transition: 2s all linear;
+  -o-transition: 2s all linear;
+  transition: 2s all linear;
+}
+
+.skills-content h2{
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+  text-transform: capitalize;
+  color: var(--white);
+  font-weight: 400;
+}
+
+
+
+/* ================================================== 
+                  Testimonial CSS 
+================================================== */
+.testimonial{
+  position: relative;
+  /* background:url(../images/client-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  padding: 100px 0 250px;
+}
+.testimonial::after{
+  position: absolute;
+  content: '';
+  top: 200px;
+  left: 0;
+  right: 0;
+  bottom: 200px;
+  background:url(../images/client-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.testimonial .feedback h4{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+.owl-dots{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s linear all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.no-js .owl-carousel, .owl-carousel.owl-loaded{
+  display: block;
+  position: relative;
+  padding-top: 250px;
+}
+.owl-carousel button.owl-dot{
+  padding: 0!important;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 20px;
+}
+.owl-carousel button.owl-dot:first-child{
+  background: url('../images/client1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.owl-carousel button.owl-dot:nth-child(2){
+  background: url('../images/client2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.owl-carousel button.owl-dot:nth-child(3){
+  background: url('../images/client3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.owl-carousel button.owl-dot:nth-child(4){
+  background: url('../images/client4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.owl-carousel button.owl-dot:nth-child(5){
+  background: url('../images/client2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.owl-carousel button.owl-dot.active{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* ================================================== 
+                Expertise CSS 
+================================================== */
+.expertise{
+  position: relative;
+}
+.expertise::after{
+  position: absolute;
+  content: '';
+  bottom: -45px;
+  right: 30px;
+  height: 425px;
+  width: 400px;
+  background: url(../images/polka.png);
+  z-index: 9;
+}
+.expertise-item{
+  position: relative;
+  margin: 0 10px;
+  margin-top: -150px !important;
+}
+.expertise-img{
+  position: relative;
+  display: block;
+  margin:0 auto;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 9;
+}
+.expertise-img::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  top: 0;
+  left: 0;
+  background: -o-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6)));
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  z-index: 99;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+.expertise-img:hover:after{
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+/*===== statistic css*/
+.statistic{
+}
+.statistic-container .row{
+  position: relative;
+  z-index: 99;
+}
+.statistic-item{
+  position: relative;
+  padding: 80px 60px;
+  background: var(--white);
+  padding: 60px 40px;
+  background: var(--white);
+  min-height: 302px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #a8a8a8;
+  z-index: 99;
+}
+
+/* ================================================== 
+                  Team CSS
+================================================== */
+.team{
+  padding: 100px 0;
+  position: relative;
+  z-index: 999;
+}
+.team-image{
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+}
+.team-image::before{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 0;
+  z-index: 9;
+  background: -o-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6)));
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+  z-index: 99;
+}
+.team-image:hover::before{
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.team .social-link{
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+  z-index: 999;
+}
+.team-image:hover .social-link{
+  left: 0;
+}
+.team-image img{
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+.team-image:hover img{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.team .social-link ul li:last-child a{
+  border-bottom: none;
+}
+.team .social-link ul li a{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  font-size: 24px;
+  border-bottom: 1px solid #666;
+  background: #252525;
+}
+.team .social-link a:hover{
+  background: var(--primary-color);
+}
+
+/* ================================================== 
+                Pricing CSS 
+================================================== */
+.pricing{
+  position: relative;
+  background: var(--primary-color);
+}
+.pricing-item{
+  position: relative;
+  border: 1px solid #eef2f6;
+  z-index: 9;
+}
+.pricing-item::before{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 0;
+  background: var(--primary-color);
+  z-index: -9;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+.pricing-item:hover::before{
+  -webkit-transform: scaleY(1.2);
+  -ms-transform: scaleY(1.2);
+  transform: scaleY(1.2);
+  opacity: 1;
+}
+.pricing-item:hover ul li,.pricing-item:hover h3,.pricing-item:hover h2,.pricing-item:hover sub,.pricing-item:hover sup{
+  color: #fff;
+}
+.pricing-item:hover ul li{
+  border-color: #5b1bc2;
+}
+.pricing-item ul li{
+  border-top: 1px solid #eef2f6;
+  border-bottom: 1px solid #eef2f6;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+.pricing-item ul li:first-child{
+  border-top: none;
+}
+.pricing-item ul li:last-child{
+  border-bottom: none;
+}
+.pricing-item a{
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+.pricing-item:hover a{
+  background: var(--white) !important;
+  color: var(--primary-color) !important;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* ================================================== 
+                Contact CSS 
+================================================== */
+.contact{
+  padding: 200px 0 100px;
+  position: relative;
+  background: var(--primary-color);
+}
+.contact::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: url(../images/divider.png);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  background-repeat: no-repeat;
+  transform: rotate(-180deg);
+  z-index: 9;
+  background-size: cover;
+}
+.contact-form form{
+  width: 100%;
+  text-align: center;
+}
+.contact-form form input{
+  height: 50px;
+  width: 49%;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+.contact-form form input:nth-child(even){
+  float: right;
+}
+.contact-form form input:nth-child(odd){
+  float: left;
+}
+.contact-form form textarea{
+  width: 100%;
+}
+.contact-form form textarea{
+  height: 200px;
+  width: 100%;
+  padding: 20px;
+}
+.contact-form form button{
+  height: 50px;
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 20px;
+  line-height: 50px;
+  background: var(--white);
+  color: var(--primary-color);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.contact-form form button:hover{
+  background: var(--secondary-color);
+  color: var(--white);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* ================================================== 
+                Location CSS 
+================================================== */
+.map{
+  position: relative;
+}
+.address{
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: absolute;
+  background: var(--white);
+  top: 0;
+  left: 200px;
+  height: 100%;
+  width: 450px;
+  text-align: left;
+  padding: 40px;
+}
+.address button{
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.address button:hover{
+  background: var(--secondary-color) !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* ================================================== 
+                    Footer CSS 
+================================================== */
+footer .social-link ul{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+footer .social-link ul li{
+  margin-right: 10px;
+}
+footer .social-link ul li a{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+footer .social-link ul li a:hover{
+  background: var(--dark);
+}
+footer form{
+  width: 100%;
+  position: relative;
+}
+footer form input{
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 30px;
+  height: 50px;
+}
+footer form button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 50px;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 400;
+  background: var(--primary-color);
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+footer form button:hover{
+  background: var(--black);
+  color: var(--white);
+}
+.copyright ul li{
+  margin-right: 20px;
+}
+.copyright ul li a:hover{
+  text-decoration: underline;
+  color: var(--text-color) !important;
+}

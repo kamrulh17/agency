@@ -1,0 +1,364 @@
+
+/* 
+    ==================================================
+                    Responsive CSS 
+    ==================================================
+*/
+
+@media(max-width:1400px){
+
+    /* banner */
+    h1{
+        font-size: 48px !important;
+    }
+    .banner-image img{
+        max-width: 60%;
+    }
+
+    /* sevices */
+    .services-item{
+        min-height: 340px;
+    }
+
+    /* skills */
+    .skills-heading h2{
+        font-size: 40px;
+    }
+    .skills-bar h3{
+        font-size: 34px;
+    }
+    .skills-bar p{
+        font-size: 20px;
+    }
+
+    /* sxpertise */
+    .expertise::after {
+        bottom: -65px;
+        right: 0;
+    }
+}
+@media(max-width:1200px){
+    .logo img{
+        max-width: 80%;
+    }
+    .logo span{
+        font-size: 32px;
+    }
+    h1{
+        font-size: 40px !important;
+    }
+    .services-item {
+        min-height: 300px;
+    }
+    .services-item img{
+        max-width: 30%;
+    }
+    .skills-heading h2{
+        font-size: 34px;
+    }
+    .skills-bar h3{
+        font-size: 28px;
+    }
+    footer p{
+        font-size: 16px !important;
+    }
+    footer .social-link ul li a {
+        height: 35px;
+        width: 35px;
+        font-size: 14px;
+    }
+}
+@media(max-width:992px){
+    nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        position: fixed;
+        top: 0;
+        right: -60%;
+        width: 60%;
+        height: 100vh;
+        text-align: center;
+        background: #fff;
+        -webkit-transition: .6s all ease-in;
+        -o-transition: .6s all ease-in;
+        transition: .6s all ease-in;
+    }
+    nav>ul{
+        margin-top: 50px;
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    header nav ul li{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    header nav>ul>li:last-child{
+        margin-top: 30px !important;
+    }
+    header nav ul li a{
+        width: 100%;
+    }
+
+    .dropdown-content{
+        position: relative !important;
+        visibility: visible;
+        opacity: 1;
+        min-width: 220px;
+        background: var(--white);
+        display: none !important;
+        top: 0;
+        left: 0;
+        background: #eef2f6 !important;;
+        /* transition: .3s all linear;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+    .submenu:hover .dropdown-content{
+        display: block !important;
+        top: 0;
+    }
+
+    .open-nav{
+        right: 0;
+    }
+    .close-nav{
+        right: -60%;
+    }
+
+    .services::after{
+        top: -50px;
+    }
+    .services-item {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .services-item img{
+        width: 45%;
+    }
+    .skills{
+        padding-bottom: 120px;
+    }
+    #skill .skill-bars .bar{
+        margin: 20px 0;
+    }
+    #skill .skill-bars .bar .info span{
+        font-size: 20px;
+    }
+    .skills-content {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .expertise-item{
+        margin-top: 30px !important;
+    }
+
+    .testimonial::after{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    .testimonial{
+        padding: 50px 0 !important;
+    }
+    .testimonial-title{
+        margin-bottom: 50px !important;
+    }
+
+    .no-js .owl-carousel, .owl-carousel.owl-loaded{
+        padding-top: 150px !important;
+    }
+    .owl-carousel button.owl-dot{
+        height: 75px;
+        width: 75px;
+    }
+    .owl-carousel button.owl-dot.active{
+        height: 125px;
+        width: 125px;
+    }
+
+    .services-item img {
+        width: 15%;
+    }
+    .pricing-title h2{
+        margin-bottom: 50px;
+    }
+    .pricing-item:hover::before {
+        -webkit-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+                transform: scaleY(1);
+        opacity: 1;
+    }
+    .statistic-item{
+        margin: 0;
+    }
+    .team-item{
+        margin: 20px 0;
+    }
+    .team-item h2{
+        margin-top: 20px;
+    }
+    .contact::after{
+        top: -50px;
+    }
+    .address {
+        width: 400px;
+        padding: 20px;
+    }
+    .copyright ul{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-bottom: 20px;
+    }
+    .copyright ul li{
+        margin: 0 10px;
+    }
+    .subscribe{
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+@media(max-width:768px){
+    .skills-heading{
+        width: 100%  !important;
+        text-align:left !important;
+    }
+
+    .owl-carousel button.owl-dot{
+        margin: 0 10px;
+    }
+    .owl-carousel button.owl-dot.active{
+        height: 125px;
+        width: 125px;
+    }
+    .owl-carousel button.owl-dot{
+        height: 75px;
+        width: 75px;
+    }
+
+    .feedback h4{
+        font-size: 16px;
+    }
+    .contact-form form input{
+        width: 100%;
+    }
+    .address p,.address a{
+        font-size: 14px;
+    }
+    .address {
+        top: 0;
+        left: 100px;
+        width: 400px; 
+    }
+    footer .logo{
+        margin-bottom: 20px;
+    }
+    footer .social-link{
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:576px){
+
+    .address {
+        top: 0;
+        left: 50px;
+        width: 50%;
+    }
+    .address h4{
+        font-size: 16px;
+    }
+    .address button{
+        font-size: 14px;
+        padding:10px;
+    }
+}
+
+@media(max-width:480px){
+    .nav {
+        right: -100%;
+        width: 100%;
+    }
+    .open-nav{
+        right: 0;
+    }
+      .close-nav{
+        right: -100%;
+    }
+    h1 {
+        font-size: 36px !important;
+    }
+    .skills-heading h2 {
+        font-size: 28px;
+        text-align: left;
+    }
+    .skills-bar h3 {
+        font-size: 24px;
+    }
+
+    .owl-carousel button.owl-dot.active{
+        height: 100px;
+        width: 100px;
+    }
+    .owl-carousel button.owl-dot{
+        height: 50px;
+        width: 50px;
+    }
+
+    .feedback{
+        width: 100% !important;
+    }
+    .address {
+        top: 0;
+        left: 50px;
+        width: 70%;
+    }
+    .copyright ul li {
+        margin: 0px 5px;
+    }
+    .copyright ul {
+        display: block !important;
+        text-align: center;
+    }
+    .copyright ul li{
+        margin:10px 0;
+    }
+}
+
+@media(max-width:380px){
+    h1 {
+        font-size: 32px !important;
+    }
+    .testimonial-title h2, .pricing-title h2, .contact-title h2{
+        font-size: 32px;
+    }
+    .owl-carousel button.owl-dot{
+        height: 50px;
+        width: 50px;
+        margin: 0 5px;
+    }
+    .owl-carousel button.owl-dot.active{
+        height: 75px;
+        width: 75px;
+    }
+    .owl-carousel.owl-loaded {
+        padding-top: 100px !important;
+    }
+}

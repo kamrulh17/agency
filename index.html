@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ===== Site Title ===== -->
+        <title>Creative | Agency</title>
+        <!-- ===== Favicon ===== -->
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+        <!-- ===== CDN Links ===== -->
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/spacing.css">
+        <link rel="stylesheet" href="vendor/css/aos.css">
+        <link rel="stylesheet" href="fonts/poppins.css">
+        <link rel="stylesheet" href="vendor/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+        <!-- 
+            ==================================================
+                                Header Starts
+            ==================================================
+            -->    
+        <header class="position-fixed w-100">
+            <div class="container">
+                <div class="row">
+                    <div class="menu d-flex align-items-center justify-content-between">
+                        <div class="logo">
+                            <a href="index.html" class="d-flex align-items-center"><img src="images/logo.png" alt="Logo"><span class="ms-10 fs-40 tc-14 font-p-700">LOGO</span></a>
+                        </div>
+                        <div class="toggler-btn d-lg-none" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <nav class="nav">
+                            <div class="cross d-lg-none">
+                                <span><i class="fas fa-times"></i></span>
+                            </div>
+                            <ul class="d-flex align-items-center">
+                                <li class="me-10"><a href="#" class="text-uppercase fs-16 font-p-600 tc-33">home</a></li>
+                                <li class="me-10"><a href="#" class="text-uppercase fs-16 font-p-600 tc-33">about</a></li>
+                                <li class="me-10 submenu">
+                                    <a href="#" class="text-uppercase fs-16 font-p-600 tc-33">services</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="javascript:void(0)">Graphic Design</a></li>
+                                        <li><a href="javascript:void(0)">Web Development</a></li>
+                                        <li><a href="javascript:void(0)">Machine Learning</a></li>
+                                        <li><a href="javascript:void(0)">Data Science</a></li>
+                                        <li><a href="javascript:void(0)">Blockchain</a></li>
+                                    </ul>
+                                </li>
+                                <li class="me-10"><a href="#" class="text-uppercase fs-16 font-p-600 tc-33">pages</a></li>
+                                <li class="me-10"><a href="#" class="text-uppercase fs-16 font-p-600 tc-33">blog</a></li>
+                                <li class="me-10"><a href="#" class="text-uppercase fs-16 font-p-600 tc-33">contact</a></li>
+                                <li class="ms-20"><a href="#" class="get-qout transition-3 text-uppercase fs-16 font-p-600 tc-15 bg-secondary d-inline-block py-15 px-45 tc-00 text-uppercase font-p-400">get qoute</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--
+            ==================================================
+                                Header Ends
+            ==================================================
+            -->
+        <!--
+            ==================================================
+                                Banner Starts
+            ==================================================
+            -->  
+        <section class="banner bg-ee">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-12">
+                        <div class="banner-text">
+                            <h1 class="fs-50 tc-33 font-p-500 mb-20" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">Here's to talanted,<br><span class="tc-secondary">amazing people</span></h1>
+                            <p class="fs-20 tc-33 font-p-400" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+                                We provide high standard clean website for your business solutions sit amet consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+                            </p>
+                            <div class="banner-button" data-aos="fade-up" data-aos-delay="1500"
+                                data-aos-duration="1000">
+                                <a href="#" class="bg-secondary d-inline-block py-15 px-45 mt-40 tc-00 text-uppercase font-p-400 transition-3 get-started">get started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-7">
+                        <div class="banner-image" data-aos="fade-left" data-aos-delay="1000"
+                            data-aos-duration="1000">
+                            <img src="images/banner.png" class="img-fluid w-75 d-block float-right" alt="Banner Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                                Banner Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                                Services Starts
+            ==================================================
+            -->  
+        <section class="services">
+            <div class="container">
+                <div class="row" style="overflow: hidden;">
+                    <div class="col-lg-4">
+                        <div class="services-item text-center bg-ff py-35 px-10" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="images/service1.png" alt="Services">
+                            <h3 class="fs-18 font-p-600  my-20 tc-33">Web Development</h3>
+                            <p class="font-p-400 fs-16 tc-66">
+                                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua  enim ad minim veniam, quis nostrud 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="services-item text-center bg-ff py-35 px-10" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="images/service2.png" alt="Services">
+                            <h3 class="fs-18 font-p-600  my-20 tc-33">Content Writing</h3>
+                            <p class="font-p-400 fs-16 tc-66">
+                                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua  enim ad minim veniam, quis nostrud 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="services-item text-center bg-ff py-35 px-10" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="images/service3.png" alt="Services">
+                            <h3 class="fs-18 font-p-600  my-20 tc-33">App Development</h3>
+                            <p class="font-p-400 fs-16 tc-66">
+                                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua  enim ad minim veniam, quis nostrud 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                                Services Ends
+            ==================================================
+            --> 
+        <!-- 
+            ==================================================
+                                Skills Starts
+            ==================================================
+            -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="skills-heading w-75 text-center m-auto" data-aos="fade-up" data-aos-duration="1000">
+                            <h2 class="font-p-300 fs-45 tc-ff mt-70">
+                                Hello! We're A Creative Agency in Sidoarjo City That Focuses On Graphic Design, Web Design & Web Development.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row overflow-hidden align-items-center mt-70 slider-part">
+                    <div class="col-lg-4">
+                        <div class="skills-text" data-aos="fade-right" data-aos-duration="1000">
+                            <h3 class="tc-ff fs-40 font-p-300 mb-20">Your unique agency team, without the overhead.</h3>
+                            <p class="tc-ff fs-24 font-p-400">
+                                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div id="skill-content" class="skills-content" data-aos="fade-left" data-aos-duration="1000" >
+                            <h2><span>Development</span> <span>80%</span></h2>
+                            <div class="skill">
+                                <div class="skill-bar" data-skill="80"></div>
+                            </div>
+                            <h2><span>HTML , CSS , JS</span> <span>90%</span></h2>
+                            <div class="skill">
+                                <div class="skill-bar" data-skill="90"></div>
+                            </div>
+                            <h2><span>marketing</span> <span>70%</span></h2>
+                            <div class="skill">
+                                <div class="skill-bar" data-skill="70"></div>
+                            </div>
+                            <h2><span>adobe apps</span> <span>80%</span></h2>
+                            <div class="skill">
+                                <div class="skill-bar" data-skill="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                                Skills Ends
+            ==================================================
+            --> 
+        <!-- 
+            ==================================================
+                                Testimonial starts
+            ==================================================
+            --> 
+        <section class="testimonial bg-ff">
+            <div class="container">
+                <div class="row">
+                    <div class="testimonial-title text-center mb-100">
+                        <h2 class="fs-40 tc-00 font-p-600 mb-10">Our Client Syas</h2>
+                        <h4 class="tc-66 fs-18 font-p-400">Simple & honest pricing. No hidden fees.</h4>
+                    </div>
+                    <div class="owl-carousel">
+                        <div class="item">
+                            <div class="feedback text-center w-75 m-auto">
+                                <div class="stars d-flex align-items-center justify-content-center mb-15">
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                </div>
+                                <h4 class="fs-24 tc-33 mb-20">
+                                    Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with.
+                                </h4>
+                                <span></span>
+                                <h3 class="font-p-700 tc-33 fs-24 mb-10">John Snow</h3>
+                                <h5 class="fs-18 tc-66 font-p-400 text-uppercase">businessman</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="feedback text-center w-75 m-auto">
+                                <div class="stars d-flex align-items-center justify-content-center mb-15">
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                </div>
+                                <h4 class="fs-24 tc-33 mb-20">
+                                    Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with.
+                                </h4>
+                                <span></span>
+                                <h3 class="font-p-700 tc-33 fs-24 mb-10">Peter Metrichev</h3>
+                                <h5 class="fs-18 tc-66 font-p-400 text-uppercase">businessman</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="feedback text-center w-75 m-auto">
+                                <div class="stars d-flex align-items-center justify-content-center mb-15">
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                </div>
+                                <h4 class="fs-24 tc-33 mb-20">
+                                    Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with.
+                                </h4>
+                                <span></span>
+                                <h3 class="font-p-700 tc-33 fs-24 mb-10">Allison Jane</h3>
+                                <h5 class="fs-18 tc-66 font-p-400 text-uppercase">businessman</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="feedback text-center w-75 m-auto">
+                                <div class="stars d-flex align-items-center justify-content-center mb-15">
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                </div>
+                                <h4 class="fs-24 tc-33 mb-20">
+                                    Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with.
+                                </h4>
+                                <span></span>
+                                <h3 class="font-p-700 tc-33 fs-24 mb-10">John Parker</h3>
+                                <h5 class="fs-18 tc-66 font-p-400 text-uppercase">businessman</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="feedback text-center w-75 m-auto">
+                                <div class="stars d-flex align-items-center justify-content-center mb-15">
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                    <span class="tc-secondary mx-05 fs-20"><i class="fas fa-star"></i></span>
+                                </div>
+                                <h4 class="fs-24 tc-33 mb-20">
+                                    Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with.
+                                </h4>
+                                <span></span>
+                                <h3 class="font-p-700 tc-33 fs-24 mb-10">Professor Leonard</h3>
+                                <h5 class="fs-18 tc-66 font-p-400 text-uppercase">businessman</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                            Testimonial Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                            Expertise Starts
+            ==================================================
+            --> 
+        <section class="expertise bg-primary">
+            <div class="container-fluid">
+                <div class="row g-0">
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="expertise-item text-center">
+                            <div class="expertise-img">
+                                <img src="images/design.jpg" class="img-fluid" alt="Phone">
+                            </div>
+                            <h3 class="tc-ff fs-20 font-p-500 mb-10 mt-30">Android Application</h3>
+                            <h4 class="tc-ff fs-18 font-p-400">Interface Design</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="expertise-item text-center">
+                            <div class="expertise-img">
+                                <img src="images/phone4.jpg" class="img-fluid" alt="Phone">
+                            </div>
+                            <h3 class="tc-ff fs-20 font-p-500 mb-10 mt-30">iOS Application</h3>
+                            <h4 class="tc-ff fs-18 font-p-400">Interface Design</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="expertise-item text-center">
+                            <div class="expertise-img">
+                                <img src="images/design2.jpg" class="img-fluid" alt="Phone">
+                            </div>
+                            <h3 class="tc-ff fs-20 font-p-500 mb-10 mt-30">Creative Design</h3>
+                            <h4 class="tc-ff fs-18 font-p-400">Interface Design</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="expertise-item text-center">
+                            <div class="expertise-img">
+                                <img src="images/design3.jpg" class="img-fluid" alt="Phone">
+                            </div>
+                            <h3 class="tc-ff fs-20 font-p-500 mb-10 mt-30">Video Editing</h3>
+                            <h4 class="tc-ff fs-18 font-p-400">Interface Design</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container statistic-container">
+                <div class="row mt-100 g-0" style="overflow: hidden;">
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="statistic-item text-center mt-20"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="images/statistics1.png" class="img-fluid" alt="Statisitc">
+                            <h2 class="font-p-600 fs-40 tc-33 mt-20 mb-10 counter">25485</h2>
+                            <h4 class="fs-18 tc-99 font-p-400">Support Given</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="statistic-item text-center mt-20" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="images/statistics2.png" class="img-fluid" alt="Statisitc">
+                            <h2 class="font-p-600 fs-40 tc-33 mt-20 mb-10 counter">784</h2>
+                            <h4 class="fs-18 tc-99 font-p-400">Video Tutorial</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="statistic-item text-center mt-20"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="images/statistics3.png" class="img-fluid" alt="Statisitc">
+                            <h2 class="font-p-600 fs-40 tc-33 mt-20 mb-10 counter">35</h2>
+                            <h4 class="fs-18 tc-99 font-p-400">Expert Stuff</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="statistic-item text-center mt-20"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="images/statistics4.png" class="img-fluid" alt="Statisitc">
+                            <h2 class="font-p-600 fs-40 tc-33 mt-20 mb-10 counter">25485</h2>
+                            <h4 class="fs-18 tc-99 font-p-400">Project Done</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                            Expertise Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                                Team Starts
+            ==================================================
+            --> 
+        <section class="team bg-ff">
+            <div class="container-fluid">
+                <div class="row"  style="overflow: hidden;">
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="team-item text-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <div class="team-image">
+                                <img src="images/team1.jpg" class="img-fluid" alt="Team Image">
+                                <div class="social-link">
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3 class="font-p-600 fs-20 tc-33 mt-30 mb-10">Robert Denhook</h3>
+                            <h4 class="font-p-400 fs-18 tc-99">Graphic Designer</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="team-item text-center"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <div class="team-image">
+                                <img src="images/team2.jpg" class="img-fluid" alt="Team Image">
+                                <div class="social-link">
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3 class="font-p-600 fs-20 tc-33 mt-30 mb-10">John Parker</h3>
+                            <h4 class="font-p-400 fs-18 tc-99">MERN Stack</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="team-item text-center"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <div class="team-image">
+                                <img src="images/team3.jpg" class="img-fluid" alt="Team Image">
+                                <div class="social-link">
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3 class="font-p-600 fs-20 tc-33 mt-30 mb-10">Allison Parker</h3>
+                            <h4 class="font-p-400 fs-18 tc-99">SEO Expert</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="team-item text-center"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <div class="team-image">
+                                <img src="images/team4.jpg" class="img-fluid" alt="Team Image">
+                                <div class="social-link">
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3 class="font-p-600 fs-20 tc-33 mt-30 mb-10">John Denvaar</h3>
+                            <h4 class="font-p-400 fs-18 tc-99">Laravell Expert</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                                Team Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                                Pricing Starts
+            ==================================================
+            -->
+        <section class="pricing bg-light py-80">
+            <div class="container">
+                <div class="pricing-title text-center">
+                    <h3 class="fs-20 font-p-400 tc-99 text-uppercase mb-10">pricing</h3>
+                    <h2 class="font-p-600 fs-50 tc-primary mb-100 text-capitalize">pricing plan</h2>
+                </div>
+                <div class="row g-0">
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="pricing-item text-center bg-ff py-40 px-20" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                            <h3 class="text-uppercase fs-20 font-p-500 mb-45">basic</h3>
+                            <h2 class="fs-50 tc-primary font-p-700 mb-30"><sup class="tc-primary fs-16 font-p-500">$</sup>10<sub class="fs-16 tc-66 font-p-400">/month</sub></h2>
+                            <ul>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Rapidiously strategize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Progressively visualize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Equity invested supply</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="d-inline-block py-10 px-30 bg-primary tc-ff fs-16 font-p-400 text-uppercase mt-40">get started</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="pricing-item text-center bg-ff py-40 px-20" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                            <h3 class="text-uppercase fs-20 font-p-500 mb-45">premium</h3>
+                            <h2 class="fs-50 tc-primary font-p-700 mb-30"><sup class="tc-primary fs-16 font-p-500">$</sup>39<sub class="fs-16 tc-66 font-p-400">/month</sub></h2>
+                            <ul>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Rapidiously strategize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Progressively visualize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Equity invested supply</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="d-inline-block py-10 px-30 bg-primary tc-ff fs-16 font-p-400 text-uppercase mt-40">get started</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="pricing-item text-center bg-ff py-40 px-20" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                            <h3 class="text-uppercase fs-20 font-p-500 mb-45">enterprise</h3>
+                            <h2 class="fs-50 tc-primary font-p-700 mb-30"><sup class="tc-primary fs-16 font-p-500">$</sup>69<sub class="fs-16 tc-66 font-p-400">/month</sub></h2>
+                            <ul>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Rapidiously strategize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Progressively visualize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Equity invested supply</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="d-inline-block py-10 px-30 bg-primary tc-ff fs-16 font-p-400 text-uppercase mt-40">get started</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3">
+                        <div class="pricing-item text-center bg-ff py-40 px-20" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                            <h3 class="text-uppercase fs-20 font-p-500 mb-45">platinum</h3>
+                            <h2 class="fs-50 tc-primary font-p-700 mb-30"><sup class="tc-primary fs-16 font-p-500">$</sup>99<sub class="fs-16 tc-66 font-p-400">/month</sub></h2>
+                            <ul>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Rapidiously strategize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Progressively visualize</li>
+                                <li class="fs-16 font-p-400 tc-66 py-10">Equity invested supply</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="d-inline-block py-10 px-30 bg-primary tc-ff fs-16 font-p-400 text-uppercase mt-40">get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                                Pricing Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                                Contact Starts
+            ==================================================
+            --> 
+        <section class="contact">
+            <div class="container">
+                <div class="contact-title text-center">
+                    <h3 class="fs-20 font-p-400 tc-ff text-uppercase mb-10">contact</h3>
+                    <h2 class="font-p-600 fs-50 tc-ff mb-80 text-capitalize">get in touch</h2>
+                </div>
+                <div class="row" style="overflow: hidden;">
+                    <div class="col-12">
+                        <div class="contact-form" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <form action="#">
+                                <input type="text" placeholder="Enter Name">
+                                <input type="email" placeholder="Enter Email"><br>
+                                <input type="tel" placeholder="Enter Phone Number">
+                                <input type="text" placeholder="Enter Subject"><br>
+                                <textarea name="msg" id="msg" placeholder="Your Message"></textarea>
+                                <button type="submit" class="font-p-400 fs-16 tc-primary transition-3">SEND MESSAGE</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                                Contact Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                                Location Starts
+            ==================================================
+            --> 
+        <section class="location">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1002.9515656483085!2d90.39281546382796!3d23.73396344108918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8e90a449e4f%3A0xb7092a9c25197fa4!2sUniversity%20of%20Dhaka!5e0!3m2!1sen!2sbd!4v1639812452920!5m2!1sen!2sbd" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="address">
+                    <p class="font-p-400 fs-20 tc-66 mb-15">
+                        Feel free to send me any question you may have. We are happy to answer them.
+                    </p>
+                    <h4 class="fs-24 tc-00 font-p-600 mb-10">Our Headquarters</h4>
+                    <p class="font-p-400 fs-20 tc-66">99 S.t Jomblo Park <br>
+                        Pekanbaru 28292. Indonesia
+                    </p>
+                    <h4 class="fs-24 tc-00 font-p-600 mt-25 mb-10">Call Center</h4>
+                    <a href="tel:+654-123987" class="font-p-400 fs-20 tc-66 d-inline-block">(+62) 654-123987</a> <br>
+                    <a href="tel:+654-123987" class="font-p-400 fs-20 tc-66 d-inline-block">(+62) 654-123987</a> <br>
+                    <button type="submit" class="text-uppercase bg-primary tc-ff fs-16 font-p-400 px-20 py-10 mt-25 transition-3">send a message</button>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            ==================================================
+                                Location Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                                footer Starts
+            ==================================================
+            --> 
+        <footer class="bg-light py-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="logo d-flex align-items-center mb-30"><img src="images/logo.png" alt="Logo" class="img-fluid"><span class="ms-10 fs-40 tc-14 font-p-700">LOGO</span></div>
+                        <div class="social-link">
+                            <ul>
+                                <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h2 class="fs-24 font-p-600 tc-33 text-uppercase mb-10">Working hours</h2>
+                        <p class="fs-18 tc-66 font-p-400 mb-10">Monday - Thursday: 06.00 - 18.00 hrs</p>
+                        <p class="fs-18 tc-66 font-p-400 mb-10">Friday & Saturday: 06.00 - 09.00 hrs</p>
+                        <p class="fs-18 tc-66 font-p-400">And all the Sunday Will be Holidays</p>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="subscribe">
+                            <h2 class="fs-24 font-p-600 tc-33 text-uppercase mb-10">get subscribe now</h2>
+                            <form action="#">
+                                <input type="email" placeholder="Your Email">
+                                <button type="submit">subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row copyright mt-50">
+                    <div class="col-lg-6 m-auto">
+                        <ul class="d-flex align-items-center">
+                            <li><a href="javascript:void(0)" class="fs-16 font-p-400 tc-66 text-capitalize">home</a></li>
+                            <li><a href="javascript:void(0)" class="fs-16 font-p-400 tc-66 text-capitalize">services</a></li>
+                            <li><a href="javascript:void(0)" class="fs-16 font-p-400 tc-66 text-capitalize">news & blog</a></li>
+                            <li><a href="javascript:void(0)" class="fs-16 font-p-400 tc-66 text-capitalize">contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 m-auto">
+                        <p class="fs-16 font-p-400 tc-66 text-center text-md-right">
+                            Copyright @2019 Agency. Designed by Kamrul.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- 
+            ==================================================
+                                Footer Ends
+            ==================================================
+            -->
+        <!-- 
+            ==================================================
+                                JavaScripts Here
+            ==================================================
+            -->
+        <script src="vendor/js/jquery-3.6.0.min.js"></script>
+        <script src="vendor/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/js/aos.js"></script>
+        <script src="vendor/js/jquery.waypoints.min.js"></script>
+        <script src="vendor/js/jquery.counterup.min.js"></script>
+        <script src="vendor/js/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
